@@ -13,7 +13,9 @@
 	#profile{font-size:20px; color:white; text-align:center; margin:auto; top:75px; left:74%; position:absolute;}
 	#data{font-size:20px; color:white; text-align:center; margin:auto; top:75px; left:80%; position:absolute;}
 	#report{font-size:20px; color:white; text-align:center; margin:auto; top:75px; left:85%; position:absolute;}
-	#ending{font-size:12px; color: white; top:8000px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
+	#ending{display: block; font-size:12px; color: white; top:9200px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
+
+/*navigation menu*/
 	#nav1{font-size:20px; color:white; text-align:center; margin:auto; top:250px; left:8%; position:absolute;}
 	#nav2{font-size:20px; color:white; text-align:center; margin:auto; top:350px; left:8%; position:absolute;}
 	#nav3{font-size:20px; color:white; text-align:center; margin:auto; top:450px; left:8%; position:absolute;}
@@ -22,18 +24,51 @@
 	#nav_menu{position: fixed;}
 	#nav_menu ul {list-style-type:none; color:white; padding-right:0px; float:left;}
 	#nav_menu ul li {border-bottom: 1px solid #c0c0c0; padding: 20px 0px 5px 20px; margin: 90px 50px 0px 50px;}
+	#topb{position: fixed; margin: auto; width: 50px; height: 50px; left:89%; top:88%; }
 
-	#entry{font-size:25px; color: white; top:530px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
-	#title{font-size:30px; color: white; top:1395px; width: 400px; height: 70px; margin:auto; left: 28.5%; position: absolute; text-align: center; border-bottom: 0.5px solid gray;}
+/*inroduce*/
+	#entry{font-size:25px; color: white; top:530px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center; filter: blur(0.1px); animation: animate 12s linear both;}
+	#title{font-size:30px; color: white; top:1395px; width: 400px; height: 60px; margin:auto; left: 28.5%; position: absolute; text-align: center; border-bottom: 0.5px solid gray;}
 	#shh4{position:absolute; margin:0px auto; width:600px; left: 56%; height:624px; top:1235px;}
 
 /*text-typing*/
-	#a1{font-size:17px; color: white; top:1500px; width: 540px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden;  white-space: nowrap; border-right: .15em solid #fff; animation: typing 1.5s steps(40, end)both;}
-	#a2{font-size:17px; color: white; top:1535px; width: 600px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden; white-space: nowrap; border-right: .15em solid #fff; animation: typing2 1.5s  1.7s steps(40, end) both;}
-	#a3{font-size:17px; color: white; top:1570px; width: 600px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden;  white-space: nowrap; border-right: .15em solid #fff; animation: typing3 1.5s 3.6s steps(40, end)both;}
-	#a4{font-size:17px; color: white; top:1605px; width: 400px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden;  white-space: nowrap; border-right: .15em solid #fff; animation: typing4 1.5s 5.35s steps(40, end) both, blink-caret .75s 5.35s step-end infinite both;}
+	#a1{font-size:17px; color: white; top:1500px; width: 540px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden;  white-space: nowrap; border-right: .15em solid #fff; animation: typing 1.5s steps(40, end)both paused;}
+	#a2{font-size:17px; color: white; top:1535px; width: 600px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden; white-space: nowrap; border-right: .15em solid #fff; animation: typing2 1.5s  1.7s steps(40, end) both paused;}
+	#a3{font-size:17px; color: white; top:1570px; width: 600px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden;  white-space: nowrap; border-right: .15em solid #fff; animation: typing3 1.5s 3.6s steps(40, end)both paused;}
+	#a4{font-size:17px; color: white; top:1605px; width: 400px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden;  white-space: nowrap; border-right: .15em solid #fff; animation: typing4 1.5s 5.35s steps(40, end) both paused, blink-caret .75s 5.35s step-end infinite both;}
 
-	#daumFlashTarget{position:relative; display: block; margin: auto; width:1000px; height:700px; top:2200px;}
+/*unfold*/
+	#daumFlashTarget{position:relative; display: block; margin: auto; width:1000px; height:700px; top:2780px;}
+	#unfold{font-size:25px; color: white; top:1480px; width: 350px; height: 40px; margin:auto; position: relative; text-align: center; border: 0.5px solid gray;}
+	#profiling{font-size:25px; color: white; top:2800px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#roadview{font-size:17px; color: white; top:2760px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
+	#pf1{font-size:20px; color: white; top:3870px; width: 150px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#pf11{font-size:17px; color: white; top:3920px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
+	#police{position:absolute; margin:0px auto; width:350px; left: 59%; height:350px; top:3920px;}
+	#pf2{font-size:20px; color: white; top:4500px; width: 150px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#pf22{font-size:17px; color: white; top:4550px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:2.2;}
+	#pf3{font-size:25px; color: white; top:4370px; width: 500px; height: 40px; margin:auto; position: relative; text-align: center;}
+	#map{display: block; position:relative; margin:0px auto; width:1600px; height:969px; top:4780px; z-index: -1;}
+	#maps{font-size:17px; color: white; top:4810px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
+	#pf33{display: block; position: relative; font-size:17px; color: white; top:4900px; width:800px; height: 36px; margin:auto; text-align: left; line-height:2.2;}
+
+/*suspicion*/
+	#suspicion{font-size:25px; color: white; top:7550px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#sp1{font-size:20px; color: white; top:7700px; width: 280px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#sp11{font-size:17px; color: white; top:7750px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
+	#sp2{font-size:20px; color: white; top:8150px; width: 280px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#sp22{font-size:17px; color: white; top:8200px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
+	#sp3{font-size:20px; color: white; top:8600px; width: 280px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#sp33{font-size:17px; color: white; top:8650px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
+
+/*present*/
+	#present{font-size:25px; color: white; top:9100px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#presentv{display: block; position: relative; margin: auto; width: 1280px; height: 720px; top: 7050px; z-index: -1;}
+	#plreport{display: block; position: relative; font-size:17px; color: white; top:8630px; width:800px; height: 36px; margin:auto; text-align: center; line-height:2.2;}
+	#pr1{display: block; position: relative; font-size:22px; color: white; top:8050px; width:800px; height: 36px; margin:auto; text-align: center; line-height:2.2;}
+	#pr11{display: block; position: relative; font-size:17px; color: white; top:8200px; width:800px; height: 36px; margin:auto; text-align: left; line-height:2.2;}
+
+
 
 /*animation*/
 	@keyframes typing {
@@ -51,6 +86,11 @@
 	@keyframes blink-caret {
 	  from, to {border-color: white}
 		50% {border-color: #000;}}
+	@keyframes animate {
+	0% {opacity: 0.97; filter: blur(0.1px);}
+	5% {opacity: 0.95; filter: blur(0.2px);}
+	10% {opacity: 0.9; filter: blur(0.2px);}
+	100% {opacity: 0.6;filter: blur(4px);}}
 
 </style>
 </head>
@@ -63,20 +103,21 @@
 <div id="entry">"공부하고 올게요."</div>
 <div id="nav_menu">
 <ul>
-<li>도입</li>
-<li>전개</li>
-<li>분석</li>
-<li>의혹</li>
-<li>현재</li>
+<li id="introduce">도입</li>
+<li id="develop">전개</li>
+<li id="analysis">분석</li>
+<li id="doubt">의혹</li>
+<li id="now">현재</li>
 </ul>
 </div>
 <div id="title">송혜희 양 실종사건</div>
 <div id="a1">1999년 2월 13일 PM 10:00 경 당시 고등학생이던 송혜희(17) 양이 실종된</div>
-<div id="a2">사건으로 2014년 2월 공소시효가 만료되 현재까지도 영구 미제 사건으로 남아있다.</div>
+<div id="a2">사건으로 2014년 2월 공소시효가 만료되 현재까지도 <font color=red>영구 미제 사건</font>으로 남아있다.</div>
 <div id="a3">지금도 가끔 ‘실종된 송혜희 좀 찾아주세요!’라는 현수막을 볼 수 있을 정도로</div>
 <div id="a4">실종자의 아버지는 자신의 딸을 찾는 데에 여념이 없다.</div>
 <img id="shh4" src="shh4.jpg">
 
+<!--로드뷰 불러오기-->
 <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"
 				codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=10,0,0,0"
 				name="daumFlashTarget" width="1000" height="700" id="daumFlashTarget" style="visibility: visible;">
@@ -96,7 +137,51 @@
 &zoom=0&hideDaumLogo=false&storeId=" wmode="opaque"></embed>
 </object>
 
+<div id="unfold">사건은 어떻게 전개되었는가.</div>
+<div id="profiling">프로파일 분석</div>
+<div id="roadview">[실종 당시 지역의 로드뷰]</div>
+<div id="pf1">경찰의 수사</div>
+<div id="pf11">경찰은 수상한 이 남성을 송 양의 <font color=red>최종 목격자이자 납치범</font>일 수 있다고 판단, 남자의 행적을 뒤쫓았다. 주변 마을을 샅샅이 찾고 일대 성매매 업소까지 수색했지만<br> 끝내 찾을 수 없었다.<br><br> 당시에는 화성 연쇄살인 사건 이후라 최첨단 수사법에 이제 막 열을 올리던 <br>시기였으나 그녀가 살던 동네는 워낙 낙후된 지역이라 CCTV가 없었고 집으로 가는 길목은 인적도 드물고 가로등이 없어 어둡고 좁은 골목길이였다.<br><br>
+그래서 수많은 인원을 투입해 논밭, 갈대숲, 하수구, 산 등 인근을 샅샅이 <br>수색해보았지만 실마리는 찾을 수 없었다.
+때마침 사건 발생일이 설날 사흘 <br>전이였다는 사실에 착안해 설을 보내기 위해 귀성한 전입자일 수 있다는 가능성에<br> 무게를 두고 수사망을 넓혀 조사해보았지만 결과는 똑같았다.
+</div>
+<img id="police" src="police.png">
+<div id="pf2">남자의 정체</div>
+<div id="pf22">당시 버스기사는 송 양과 합승하던 남자에 대해 이렇게 진술했다.<br> <ui><li><font color=red>30대</font> 정도로 보이는 남자였다.
+<li>오리털 파카에 등산화를 쓰고 있었다. <li>하지만 모자를 푹 눌러써서 얼굴을 확인하진 못했다.
+<li>평택 시내에서 버스를 탔다.
+<li>이 동네 사람이 아닌 것 같아서 ‘어디를 가느냐’고 물었더니 <br>‘<font color=red>도일동 하리부락</font>’이라고 대답했다.
+<li>몸에서 술냄새를 풍겼다.
+<li>버스에서 내린 후 도로를 건너지않고 지하도로 향했다.
+<font color=red>하지만 도로든 <br>지하도든 하리마을 방향인건 마찬가지였다.</font></li><ui>
+</div>
+<div id="pf3">단일 사건이 아닌 <font color=red>연쇄 사건</font> 중 하나일 것이다.</div>
+<img id="map" src="map.jpg">
+<div id="maps">[1998 ~ 2004년, 6년간 일어난 경기 남부 부녀자 연쇄 살인 실종 사건 상황도]</div>
+<div id="pf33">1998년부터 2004년까지 평택에서 발생한 부녀자 연쇄 살인 및 실종 사건은 한 개의 사건을 제외하고 모두 오리무중에 빠져있으며 마치 화성 연쇄살인 사건을 연상시킨다. 경찰은 이들 사건의 윤곽조차 잡지 못했으며 이제 와서 새로운 단서를 발견하기도 만만치가 않다.<br><br>
+사건발생 3년후 송혜희양이 실종된 버스종점에서 부녀자가 실종됐다가 시신으로 발견된 사건이 있었다.<br> 프로파일러들은 현재 이 사건과 송혜희양의 사건의 범인을 동일범의 소행으로 보고있고 또한 2004년에 발생한 화성 여대생 사건 역시 이 두 건과 수법이 비슷해 이 3사건을 <font color=red>동일범의 소행</font>으로 보고있다.
+<br><br>
+1999년 2월(2차), 2002년 9월(8차) 사건은 모두 동일 장소에서 발생하였고 2004년 10월(9차)에서는 장소는<br> 다르나 정류장에서 내려 인접해 있는 집까지 다른 교통수단이 선호되는 상황에서 벌어진 점에서 수법이 매우 비슷하다.
+</div>
+<div id="suspicion">의혹</div>
+<div id="sp1">의혹1. 정말 단순 가출인가?</div>
+<div id="sp11">5년이 흐른 뒤인 2004년에 이르자 경찰은 송 양이 스스로 잠적했을 가능성에<br> 무게를 뒀다. 가족은 그럴 리 없다고 극구 부인했지만 경찰은 여기에라도 <br>희망을 건다.<br> 2004년 2월, 부산광역시에서 송 양의 명의로 인터넷이 접속된 것을 포착한 <br>경찰은 급히 부산으로 내려가 잠복 수사를 한다. 다시 접속 흔적이 나타나자 해당 <br>피시방을 급습해 확인했지만 접속자는 송 양이 아닌 어느 젊은 남녀였다.
+알고보니 이들은 송 양의 아버지가 딸을 찾기 위해 붙여둔 전단지에 있던 송 양의 <br>주민등록번호를 도용한 것이였다.</div>
+<div id="sp2">의혹2. 버스기사가 범인?</div>
+<div id="sp22">애초에 이 동네 사람이 아닌것같아 말을 붙였다는 것이 어색하고 하필 30대 남성이 ‘하리부락’이라 대답한 점도 수상하다고 여기는 의견도 있다.<br> 스마트폰도 없던 99년도에 외지인이 술에 취한 채 대중교통을 통해 구체적 지명을 언급하는건 앞뒤가 맞지않고 평소 늦은 시간에 혼자 귀가하는 실종자를 눈여겨 본 버스기사가 범행을 감추기 위해 30대 남성이라는 가상의 인물을 만들어냈다는 <br>의견이다. </div>
+<div id="sp3">의혹3. 장기밀매조직의 희생양?</div>
+<div id="sp33">아마 장기 밀매 조직에 의해 희생됬을 수도 있다는 의혹이다. 정상적인 장기 이식을 위해선 국립장기이식관리센터에 등록해야하는데 이식 대기자는 넘쳐나는데 정작 이식이 이루어지는 경우가 적다는 것이다. 언제 차례가 돌아올지 기약이 없고 운에 기대하다가는 목숨이 위태로울 수 있다.<br>
+장기 이식이 필요한 환자의 경우 해외에 나가 원정 장기매매를 하는 경우도 있지만 여러 가지 문제를 우려해 국내에서 찾을 수 있다. 이때 ‘장기 밀매업자’들과 접촉에 나서는데 그러한 수요를 ‘납치’ 등을 통해 조달할 수도 있다는 것이다.
+</div>
+<div id="present">현재</div>
 <div id="ending">Copyrightⓒ 2019/All Rights Reserved - KSK</div>
+<img id="topb" src="top.png">
+<div id="pr1">"아빠만 잘 살아서 미안해."</div>
+<div id="pr11">전교 1~2등을 할 정도로 영특했고 성실해서 가족의 자랑거리였던 딸.<br><br> 실종된 딸을 찾아다닌 거리는 무려 72만㎞로 지구 18바퀴를 돈 거리와 같다. 지금까지 쓴 전단만 해도 대략 <br>300만장, 현수막 2500개에 달한다. 과거 2차례의 허리 수술과 뇌경색 후유증으로 거동이 온전치 못하지만 딸을 찾는 전단과 현수막 제작 비용을 보태기 위해 하루종일 폐지를 모으고 있다.<br><br> 송 양의 어머니는 딸을 찾지 못했다는 절망감에 우울증을 앓아 농약 자살로 생을 마감했지만 아버지는 <br>현재까지도 희망의 끈을 놓지않으며 실종된 딸을 찾고야 말겠다는 일념 하나로 살아가시고 있다.
+</div>
+<div id="plreport"><u>제보전화</u><br> 경기 평택 경찰서 031-651-5604<br><br> <u>실종자 가족 후원계좌</u><br> 농협 205030-56-194211 송길용</div>
+<video id="presentv" src="presentv.mp4" controls width="1280" height="720">
+<embed src="presentv.mp4"></embed>
 
 <script type="text/javascript">
 
@@ -115,6 +200,72 @@
 	report.onmouseover = function(){
 		report.style.cursor = "pointer";
 		}
+
+	unfold.onmouseover = function(){
+		unfold.style.cursor = "pointer";
+		}
+
+	window.onscroll = function(){
+		var t = document.documentElement.scrollTop;
+			if(t>800){
+			a1.style.animationPlayState = "running";
+			a2.style.animationPlayState = "running";
+			a3.style.animationPlayState = "running";
+			a4.style.animationPlayState = "running";
+			}}
+
+		topb.onmouseover = function(){
+			topb.style.cursor = "pointer";
+			}
+
+		introduce.onmouseover = function(){
+			introduce.style.cursor = "pointer";
+			}
+
+		develop.onmouseover = function(){
+			develop.style.cursor = "pointer";
+			}
+
+		analysis.onmouseover = function(){
+			analysis.style.cursor = "pointer";
+			}
+
+		doubt.onmouseover = function(){
+			doubt.style.cursor = "pointer";
+			}
+
+		now.onmouseover = function(){
+			now.style.cursor = "pointer";
+			}
+
+	topb.onmouseover = function(){
+		topb.style.cursor = "pointer";
+		}
+
+	topb.onclick = function(){
+		window.scrollBy({ top: -10000, behavior: 'smooth' });
+		}
+
+	introduce.onclick = function(){
+		document.getElementById('title').scrollIntoView();
+		}
+
+	develop.onclick = function(){
+		document.getElementById('unfold').scrollIntoView();
+		}
+
+	analysis.onclick = function(){
+		document.getElementById('profiling').scrollIntoView();
+		}
+
+	doubt.onclick = function(){
+		document.getElementById('suspicion').scrollIntoView();
+		}
+
+	now.onclick = function(){
+		document.getElementById('present').scrollIntoView();
+		}
+
 
 </script>
 
