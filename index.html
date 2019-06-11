@@ -14,6 +14,7 @@
 	#data{font-size:20px; color:white; text-align:center; margin:auto; top:75px; left:80%; position:absolute;}
 	#report{font-size:20px; color:white; text-align:center; margin:auto; top:75px; left:85%; position:absolute;}
 	#ending{display: block; font-size:12px; color: white; top:9200px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
+	#gnb{display: block; position: relative; margin:auto; top: -2085px; width: 1800px; height: 1px; background-color: gray;}
 
 /*navigation menu*/
 	#nav1{font-size:20px; color:white; text-align:center; margin:auto; top:250px; left:8%; position:absolute;}
@@ -156,7 +157,7 @@
 <font color=red>하지만 도로든 <br>지하도든 하리마을 방향인건 마찬가지였다.</font></li><ui>
 </div>
 <div id="pf3">단일 사건이 아닌 <font color=red>연쇄 사건</font> 중 하나일 것이다.</div>
-<img id="map" src="map.jpg">
+<div id="map" style="width:1400px;height:700px;"></div>
 <div id="maps">[1998 ~ 2004년, 6년간 일어난 경기 남부 부녀자 연쇄 살인 실종 사건 상황도]</div>
 <div id="pf33">1998년부터 2004년까지 평택에서 발생한 부녀자 연쇄 살인 및 실종 사건은 한 개의 사건을 제외하고 모두 오리무중에 빠져있으며 마치 화성 연쇄살인 사건을 연상시킨다. 경찰은 이들 사건의 윤곽조차 잡지 못했으며 이제 와서 새로운 단서를 발견하기도 만만치가 않다.<br><br>
 사건발생 3년후 송혜희양이 실종된 버스종점에서 부녀자가 실종됐다가 시신으로 발견된 사건이 있었다.<br> 프로파일러들은 현재 이 사건과 송혜희양의 사건의 범인을 동일범의 소행으로 보고있고 또한 2004년에 발생한 화성 여대생 사건 역시 이 두 건과 수법이 비슷해 이 3사건을 <font color=red>동일범의 소행</font>으로 보고있다.
@@ -180,6 +181,7 @@
 <div id="pr11">전교 1~2등을 할 정도로 영특했고 성실해서 가족의 자랑거리였던 딸.<br><br> 실종된 딸을 찾아다닌 거리는 무려 72만㎞로 지구 18바퀴를 돈 거리와 같다. 지금까지 쓴 전단만 해도 대략 <br>300만장, 현수막 2500개에 달한다. 과거 2차례의 허리 수술과 뇌경색 후유증으로 거동이 온전치 못하지만 딸을 찾는 전단과 현수막 제작 비용을 보태기 위해 하루종일 폐지를 모으고 있다.<br><br> 송 양의 어머니는 딸을 찾지 못했다는 절망감에 우울증을 앓아 농약 자살로 생을 마감했지만 아버지는 <br>현재까지도 희망의 끈을 놓지않으며 실종된 딸을 찾고야 말겠다는 일념 하나로 살아가시고 있다.
 </div>
 <div id="plreport"><u>제보전화</u><br> 경기 평택 경찰서 031-651-5604<br><br> <u>실종자 가족 후원계좌</u><br> 농협 205030-56-194211 송길용</div>
+<div id="gnb"></div>
 <video id="presentv" src="presentv.mp4" controls width="1280" height="720">
 <embed src="presentv.mp4"></embed>
 
@@ -266,6 +268,88 @@
 		document.getElementById('present').scrollIntoView();
 		}
 
+// Profiling map
+		var mapContainer = document.getElementById('map'), // 지도를 표시할 div
+		    mapOption = {
+		        center: new daum.maps.LatLng(37.08000, 126.99613), // 지도의 중심좌표
+		        level: 9, // 지도의 확대 레벨
+		        mapTypeId : daum.maps.MapTypeId.HYBRID
+		    };
+
+		var map = new daum.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+		// 마커를 표시할 위치와 내용을 가지고 있는 객체 배열입니다
+		var positions = [
+		    {
+		        content: '<div>1차 : 1998년 9월, 경기도 평택시 안중읍 안중리, S병원 뒤편 공영주차장 차량 트렁크에 유 모씨(49) 결박된 채로 방화 살해</div>',
+		        latlng: new daum.maps.LatLng(36.98657, 126.87716)
+		    },
+		    {
+		        content: '<div>2차 : 1999년 2월 13일, 경기도 평택시 도일동, pm 10:10, 버스에서 내린 송 모씨(19, 평택시 도일동 거주)가 행방불명</div>',
+		        latlng: new daum.maps.LatLng(37.05219, 127.11093)
+		    },
+		    {
+		        content: '<div>3차 : 1999년 11월 23일, 경기도 평택시 포승면 도곡5리, 야산 진입로에 최 모씨(22, 평택시 포승면 거주)가 강간당한 뒤 살해된 채로 발견</div>',
+		        latlng: new daum.maps.LatLng(36.98703, 126.93303)
+		    },
+		    {
+		        content: '<div>4차 : 2000년 8월 31일, 경기도 평택시 비전2동, S아파트에서 황 모씨(69)가 자신의 집 넥타이에 목이 메여 숨진채 발견, 입과 코가 막혀 질식사</div>',
+		        latlng: new daum.maps.LatLng(36.99042, 127.11028)
+		    },
+		    {
+		        content: '<div>5차 : 2000년 12월 14일, 경기도 평택시 서정·장당동, 홍 모씨(30), 자신의 집에서 전선에 결박된 채 목졸려 살해</div>',
+		        latlng: new daum.maps.LatLng(37.06143, 127.06290)
+		    },
+		    {
+		        content: '<div>6차 : 2001년 7월 25일, 경기도 평택시 장당동, 최 모씨(70, 평택시 장당동 거주), 자신의 집에서 흉기로 머리 등 찔린 채 살해되어 발견</div>',
+		        latlng: new daum.maps.LatLng(37.04809, 127.06426)
+		    },
+		    {
+		        content: '<div>7차 : 2002년 7월 24일, 경기도 평택시 안중읍, 임 모씨(75) 자신의 집에서 목졸려 살해된 뒤 방화</div>',
+		        latlng: new daum.maps.LatLng(36.99709, 126.93785)
+		    },
+		    {
+		        content: '<div>9차 : 2005년 3월 12일, 경기도 평택시 팽성읍, A아파트 앞에서 이 아파트에 사는 공 모양(16)이 실종</div>',
+		        latlng: new daum.maps.LatLng(36.96566, 127.06239)
+		    },
+		    {
+		        content: '<div>추가 : 2004년 10월 27일, 경기도 화성시 봉담읍 와우리, 노 모양 봉담읍 와우리공단 하차를 마지막으로 실종 → 정남면 보통리 야산 일대에서 변사체로 발견</div>',
+		        latlng: new daum.maps.LatLng(37.20491, 126.96837)
+		    },
+		];
+
+		for (var i = 0; i < positions.length; i ++) {
+		    // 마커를 생성합니다
+		    var marker = new daum.maps.Marker({
+		        map: map, // 마커를 표시할 지도
+		        position: positions[i].latlng // 마커의 위치
+		    });
+
+		    // 마커에 표시할 인포윈도우를 생성합니다
+		    var infowindow = new daum.maps.InfoWindow({
+		        content: positions[i].content // 인포윈도우에 표시할 내용
+		    });
+
+		    // 마커에 mouseover 이벤트와 mouseout 이벤트를 등록합니다
+		    // 이벤트 리스너로는 클로저를 만들어 등록합니다
+		    // for문에서 클로저를 만들어 주지 않으면 마지막 마커에만 이벤트가 등록됩니다
+		    daum.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+		    daum.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+		}
+
+		// 인포윈도우를 표시하는 클로저를 만드는 함수입니다
+		function makeOverListener(map, marker, infowindow) {
+		    return function() {
+		        infowindow.open(map, marker);
+		    };
+		}
+
+		// 인포윈도우를 닫는 클로저를 만드는 함수입니다
+		function makeOutListener(infowindow) {
+		    return function() {
+		        infowindow.close();
+		    };
+		}
 
 </script>
 
