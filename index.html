@@ -2,8 +2,27 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Cold Case Profile - Profile</title>
+<title>Cold Case Profile - Profiling</title>
 <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/bxslider.css">
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	var main = $('.bxslider').bxSlider({
+		mode: 'fade',
+		controls : true,	//좌우 화살표
+		autoControls: true,	//stop,play
+		pager:true,	//페이징
+		pause: 3000,
+		slideWidth: 1200,	//이미지박스 크기
+		speed: 500,
+	});
+});
+
+</script>
+
 <style type="text/css">
 
 /*Basic Style*/
@@ -14,7 +33,7 @@
 	#data{font-size:20px; color:white; text-align:center; margin:auto; top:75px; left:80%; position:absolute;}
 	#report{font-size:20px; color:white; text-align:center; margin:auto; top:75px; left:85%; position:absolute;}
 	#ending{display: block; font-size:12px; color: white; top:9200px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
-	#gnb{display: block; position: relative; margin:auto; top: -2020px; width: 1800px; height: 1px; background-color: gray;}
+	#gnb{display: block; position: relative; margin:auto; top: -1970px; width: 1800px; height: 1px; background-color: gray;}
 
 /*navigation menu*/
 	#nav1{font-size:20px; color:white; text-align:center; margin:auto; top:250px; left:8%; position:absolute;}
@@ -39,19 +58,20 @@
 	#a4{font-size:17px; color: white; top:1605px; width: 400px; height: 24px; margin:auto; left: 24%; position: absolute; text-align: left; overflow: hidden;  white-space: nowrap; border-right: .15em solid #fff; animation: typing4 1.5s 5.35s steps(40, end) both paused, blink-caret .75s 5.35s step-end infinite both;}
 
 /*unfold*/
-	#daumFlashTarget{position:relative; display: block; margin: auto; width:1000px; height:700px; top:2840px;}
-	#unfold{font-size:25px; color: white; top:1480px; width: 350px; height: 40px; margin:auto; position: relative; text-align: center; border: 0.5px solid gray;}
-	#profiling{font-size:25px; color: white; top:2800px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
-	#roadview{font-size:17px; color: white; top:2820px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
-	#pf1{font-size:20px; color: white; top:3870px; width: 150px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
-	#pf11{font-size:17px; color: white; top:3920px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
-	#police{position:absolute; margin:0px auto; width:350px; left: 59%; height:350px; top:3920px;}
+	#daumFlashTarget{position:relative; display: block; margin: auto; width:1000px; height:600px; top:2950px;}
+	#unfold{font-size:25px; color: white; top:2020px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#profiling{font-size:25px; color: white; top:2980px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#roadview{font-size:17px; color: white; top:3070px; width: 600px; height: 30px; margin:auto; position: relative; text-align: center;}
+	#pf1{font-size:20px; color: white; top:3920px; width: 150px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
+	#pf11{font-size:17px; color: white; top:3970px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
+	#police{position:absolute; margin:0px auto; width:350px; left: 59%; height:350px; top:3970px;}
 	#pf2{font-size:20px; color: white; top:4500px; width: 150px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
 	#pf22{font-size:17px; color: white; top:4550px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:2.2;}
-	#pf3{font-size:25px; color: white; top:4370px; width: 500px; height: 40px; margin:auto; position: relative; text-align: center;}
+	#pf3{font-size:25px; color: white; top:4500px; width: 500px; height: 40px; margin:auto; position: relative; text-align: center;}
 	#map{position:relative; display: block; margin: auto; width:1400px; height:900px; top:4785px;}
 	#mapz{font-size:17px; color: white; top:4810px; width: 600px; height: 80px; margin:auto; position: relative; text-align: center;}
 	#pf33{display: block; position: relative; font-size:17px; color: white; top:4900px; width:800px; height: 36px; margin:auto; text-align: left; line-height:2.2;}
+	#man{position:absolute; margin:0px auto; width:450px; left: 59%; height:450px; top:4490px;}
 
 /*suspicion*/
 	#suspicion{font-size:25px; color: white; top:7550px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
@@ -61,12 +81,15 @@
 	#sp22{font-size:17px; color: white; top:8200px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
 	#sp3{font-size:20px; color: white; top:8600px; width: 280px; height: 36px; margin:auto; left: 26%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
 	#sp33{font-size:17px; color: white; top:8650px; width:600px; height: 36px; margin:auto; left: 26.5%; position: absolute; text-align: left; line-height:1.8;}
+	#excape{position:absolute; margin:0px auto; width:400px; left: 59%; height:400px; top:7650px;}
+	#bus{position:absolute; margin:0px auto; width:350px; left: 59%; height:350px; top:8070px;}
+	#cancer{position:absolute; margin:0px auto; width:350px; left: 59%; height:350px; top:8565px;}
 
 /*present*/
 	#present{font-size:25px; color: white; top:9100px; width: 200px; height: 45px; margin:auto; left: 24%; position: absolute; text-align: left; border-bottom: 0.5px solid gray;}
-	#presentv{display: block; position: relative; margin: auto; width: 1280px; height: 720px; top: 7050px; z-index: -1;}
+	#presentv{display: block; position: relative; margin: auto; width: 1280px; height: 720px; top: 6430px; z-index: -1;}
 	#plreport{display: block; position: relative; font-size:17px; color: white; top:8630px; width:800px; height: 36px; margin:auto; text-align: center; line-height:2.2;}
-	#pr1{display: block; position: relative; font-size:22px; color: white; top:8050px; width:800px; height: 36px; margin:auto; text-align: center; line-height:2.2;}
+	#pr1{display: block; position: relative; font-size:30px; color: white; top:8090px; width:800px; height: 36px; margin:auto; text-align: center; line-height:2.2;}
 	#pr11{display: block; position: relative; font-size:17px; color: white; top:8200px; width:800px; height: 36px; margin:auto; text-align: left; line-height:2.2;}
 
 
@@ -92,6 +115,15 @@
 	5% {opacity: 0.95; filter: blur(0.2px);}
 	10% {opacity: 0.9; filter: blur(0.2px);}
 	100% {opacity: 0.6;filter: blur(4px);}}
+	@-webkit-keyframes fade {
+	  from {opacity: .4}
+	  to {opacity: 1}}
+	@keyframes fade {
+	  from {opacity: .4}
+	  to {opacity: 1}}
+	/* On smaller screens, decrease text size */
+	@media only screen and (max-width: 300px) {
+	  .prev, .next,.text {font-size: 11px}}
 
 </style>
 </head>
@@ -138,7 +170,7 @@
 &zoom=0&hideDaumLogo=false&storeId=" wmode="opaque"></embed>
 </object>
 
-<div id="unfold">사건은 어떻게 전개되었는가.</div>
+<div id="unfold">사건 일지</div>
 <div id="profiling">프로파일 분석</div>
 <div id="roadview">[실종 당시 지역의 로드뷰]</div>
 <div id="pf1">경찰의 수사</div>
@@ -182,10 +214,35 @@
 </div>
 <div id="plreport"><u>제보전화</u><br> 경기 평택 경찰서 031-651-5604<br><br> <u>실종자 가족 후원계좌</u><br> 농협 205030-56-194211 송길용</div>
 <div id="gnb"></div>
+<div class="home__slider">
+	<div class="bxslider">
+		<div><img src="uf1.jpg" alt="그림1"></div>
+		<div><img src="uf2.jpg" alt="그림2"></div>
+		<div><img src="uf3.jpg" alt="그림3"></div>
+		<div><img src="uf4.jpg" alt="그림4"></div>
+		<div><img src="uf5.jpg" alt="그림5"></div>
+		<div><img src="uf6.jpg" alt="그림6"></div>
+		<div><img src="uf7.jpg" alt="그림7"></div>
+		<div><img src="uf8.jpg" alt="그림8"></div>
+		<div><img src="uf9.jpg" alt="그림9"></div>
+		<div><img src="uf10.jpg" alt="그림10"></div>
+		<div><img src="uf11.jpg" alt="그림11"></div>
+		<div><img src="uf12.jpg" alt="그림12"></div>
+		<div><img src="uf13.jpg" alt="그림13"></div>
+		<div><img src="uf14.jpg" alt="그림14"></div>
+		<div><img src="uf15.jpg" alt="그림15"></div>
+		<div><img src="uf16.jpg" alt="그림16"></div>
+		<div><img src="uf17.jpg" alt="그림17"></div>
+	</div>
+</div>
+<img id="man" src="man.png">
+<img id="excape" src="excape.png">
+<img id="bus" src="bus.png">
+<img id="cancer" src="cancer.png">
 <video id="presentv" src="presentv.mp4" controls width="1280" height="720">
 <embed src="presentv.mp4"></embed>
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556f39dcb1ed10f0d2119744865404b"></script>
 
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9556f39dcb1ed10f0d2119744865404b"></script>
 <script>
 
 	ccp.onmouseover = function(){
@@ -352,7 +409,7 @@
 		    };
 		}
 
-
+//unfold toon
 
 </script>
 
